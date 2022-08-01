@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Do It Bad
  * Plugin URI: https://software.gieffeedizioni.it
- * Description: Statistics for Update Manager by CodePotent.
- * Version: 1.0.0
+ * Description: Let's mess up the dir!
+ * Version: 3.0.0
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Author: Gieffe edizioni srl

@@ -1,4 +1,5 @@
 === Do It Bad ===
+Plugin Name: Do It Bad
 Description: Let's mess up the dir!
 Author: Simone Fioravanti
 Author URI: https://software.gieffeedizioni.it
@@ -14,4 +15,4 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Let's mess up the dir! (from the readme content)
 
 # Header!
-~I'm an useful plugin~
+~~I'm an useful plugin~~

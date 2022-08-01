@@ -21,6 +21,19 @@ if (!defined('ABSPATH')) {
 function render_page () {
 	echo '<h1>Doing it bad!</h1>';
 	echo 'I am <code>' . __FILE__ . '</code>.';
+	
+	echo "<h2>Welcome to the sandbox</h2>";
+	echo'<pre>';
+	// PLAY THERE
+
+
+
+
+
+
+
+	// END OF GAMES
+	echo'</pre>';
 
 }
 

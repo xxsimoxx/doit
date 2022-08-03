@@ -36,7 +36,7 @@ class Bad {
 			'edit_posts',
 			'doitbad',
 			[$this, 'render_page'],
-			'dashicons-palmtree'
+			'dashicons-pets'
 		);
 	}
 
@@ -54,8 +54,8 @@ class Bad {
 		echo '<h2 id="ciao">Welcome to the sandbox</h2>';
 		echo '<pre>';
 		// PLAY THERE
-
-		// END OF GAMES
+ 
+ 		// END OF GAMES
 		echo '</pre>';
 
 	}

@@ -16,3 +16,4 @@ Let's mess up the dir! (from the readme content)
 
 # Header!
 ~~I'm an useful plugin~~
+Not so bad!

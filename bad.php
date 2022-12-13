@@ -3,7 +3,9 @@
  * Plugin Name: Do It Bad
  * Plugin URI: https://software.gieffeedizioni.it
  * Description: Let's mess up the dir!
- * Version: 6.0.0
+ * Version: 8.0.0
+ * Requires CP: 1.1
+ * Requires PHP: 7.4
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Author: Gieffe edizioni srl

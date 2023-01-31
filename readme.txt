@@ -4,9 +4,10 @@ Description: Let's mess up the dir!
 Author: Simone Fioravanti
 Author URI: https://software.gieffeedizioni.it
 Tags: email logs, classicpress
-Version: 8.0.0
+Version: 9.0.0
 Requires CP: 1.1
 Requires PHP: 7.4
+Premum URI: https://simonefioravanti.it
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 

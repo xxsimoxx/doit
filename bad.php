@@ -10,7 +10,7 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Author: Gieffe edizioni srl
  * Author URI: https://www.gieffeedizioni.it
- * Premum URI: https://simonefioravanti.it
+ * Premium URI: https://simonefioravanti.it
  * Text Domain: do-it-bad
  * Domain Path: /languages
  */

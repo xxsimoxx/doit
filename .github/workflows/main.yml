@@ -12,15 +12,15 @@ jobs:
       - name: Create artifact
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -X -r doit.${{  github.ref_name }}.zip . -x *.git*
+          args: zip -X -r ${{ github.event.repository.name }}.${{  github.ref_name }}.zip . -x *.git*
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-            name: doit
-            path: doit.${{  github.ref_name }}.zip
+            name: ${{ github.event.repository.name }}
+            path: ${{ github.event.repository.name }}.${{  github.ref_name }}.zip
       - name: Upload to release
         uses: JasonEtco/upload-to-release@master
         with:
-          args: doit.${{  github.ref_name }}.zip application/zip
+          args: ${{ github.event.repository.name }}.${{  github.ref_name }}.zip application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

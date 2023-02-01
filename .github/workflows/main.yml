@@ -12,7 +12,7 @@ jobs:
       - name: Create artifact
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -X -r ${GITHUB_WORKSPACE}/${{ github.event.repository.name }}.${{  github.ref_name }}.zip ${{ github.event.repository.name }}  -x *.git* 
+          args: zip -X -r ${{ GITHUB_WORKSPACE }}/${{ github.event.repository.name }}.${{  github.ref_name }}.zip ${{ github.event.repository.name }}  -x *.git* 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:

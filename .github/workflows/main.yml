@@ -14,7 +14,9 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
       - name: Create artifact
-        run : git archive -o ${{ github.event.repository.name }}-${{ github.ref_name }}.zip --prefix ${{ github.event.repository.name }}/ HEAD 
+        run : |
+          git archive -o ${{ github.event.repository.name }}-${{ github.ref_name }}.zip --prefix ${{ github.event.repository.name }}/ HEAD 
+          ls
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -23,6 +25,6 @@ jobs:
       - name: Upload to release
         uses: JasonEtco/upload-to-release@master
         with:
-          args: ${{ github.event.repository.name }}-${{ github.ref_name }}.zip
+          args: ${{ github.event.repository.name }}-${{ github.ref_name }}.zip application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

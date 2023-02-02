@@ -7,6 +7,13 @@ jobs:
     name: Upload Release Asset
     runs-on: ubuntu-latest
     steps:
+        - name: Install git 
+          run: |
+            apt-get install -y git
+            git --version
+            echo "Path is ... $PATH"
+            PATH=$PATH:$(which git)
+            echo "Path is ... $PATH"
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Create artifact

@@ -1,46 +1,21 @@
-name: Coding Standards
+name: WordPress Coding Standard checks.
 
-on:
-  push:
-    branches:
-      - develop
-  pull_request:
-  workflow_dispatch:
+on: pull_request
 
 jobs:
-  # Runs PHP coding standards checks.
-  #
-  # Violations are reported inline with annotations.
-  #
-  # Performs the following steps:
-  # - Checks out the repository.
-  # - Sets up PHP.
-  # - Logs debug information.
-  # - Logs PHP_CodeSniffer debug information.
-  # - Runs PHPCS on the full codebase with warnings suppressed.
   phpcs:
-    name: PHP coding standards
-    runs-on: ubuntu-latest
-    if: ${{ github.repository == 'ClassicPress/ClassicPress-v2' || github.event_name == 'pull_request' }}
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-          coverage: none
-          tools: cs2pr
-
-      - name: Log debug information
-        run: |
-          php --version
-          composer --version
-
-      - name: Log PHPCS debug information
-        run: phpcs -i
-
-      - name: Run PHPCS on all Core files
-        run: phpcs --runtime-set text_domain doit --standard=cpcs.xml -q -n --report=checkstyle | cs2pr
+      name: WPCS
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: WPCS check
+          uses: 10up/wpcs-action@stable
+          with:
+            enable_warnings: false # Enable checking for warnings (-w)
+            paths: '.' # Paths to check, space separated
+            excludes: '' # Paths to excludes, space separated
+            standard: 'WordPress' # Standard to use. Accepts WordPress|WordPress-Core|WordPress-Docs|WordPress-Extra|WordPress-VIP-Go|WordPressVIPMinimum.
+            standard_repo: '' # Public (git) repository URL of the coding standard
+            repo_branch: 'main' # Branch of Standard repository
+            phpcs_bin_path: 'phpcs' # Custom PHPCS bin path
+            use_local_config: true # Use local config if available

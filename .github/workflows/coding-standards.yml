@@ -1,14 +1,14 @@
-name: WordPress Coding Standard checks.
+name: ClassicPress Directory Coding Standard checks.
 
 on: pull_request
 
 jobs:
   phpcs:
-      name: WPCS
+      name: CPCS
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
         - name: WPCS check
           uses: 10up/wpcs-action@stable
           with:
-            use_local_config: true # Use local config if available
+            use_local_config: true

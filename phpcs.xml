@@ -14,7 +14,7 @@
 	<arg name="extensions" value="php" />
 
 	<!-- check local directory -->
-	<config name="file" value="." />
+	<file>.</file>
 
 	<!-- check for minimum WP version required -->
 	<config name="minimum_supported_wp_version" value="1.0.0"/>

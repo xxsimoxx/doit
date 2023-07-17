@@ -44,7 +44,7 @@ class Bad {
 	public function render_page() {
 
 		echo '<script> jQuery(document).ready(function(){';
-		echo ' jQuery("#wpwrap").css("background-image", "url('.plugin_dir_url(__FILE__).'glass2.png)");';
+		echo ' jQuery("#wpwrap").css("background-image", "url('.esc_url_raw(plugin_dir_url(__FILE__)).'glass2.png)");';
 		echo ' jQuery("#wpwrap").css("background-position", "center");';
 		echo ' jQuery("#wpwrap").css("background-repeat", "no-repeat");';
 		echo ' jQuery("#wpwrap").css("background-size", "cover");';

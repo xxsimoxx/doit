@@ -8,7 +8,14 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
-        - name: WPCS check
+        - name: CPCS get rules
+          run: |
+            wget https://raw.githubusercontent.com/ClassicPress/ClassicPress-Coding-Standards/main/phpcs.xml
+            sed -i '/^\t<!-- start config -->.*/a\
+              <file>.</file>
+              ' phpcs.xml
+            cat phpcs.xml
+        - name: CPCS checks
           uses: 10up/wpcs-action@stable
           with:
             use_local_config: true

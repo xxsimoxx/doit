@@ -19,3 +19,4 @@ jobs:
             repo_branch: 'master' # Branch of Standard repository
             phpcs_bin_path: 'phpcs' # Custom PHPCS bin path
             use_local_config: true # Use local config if available
+            extra_args: '-v'

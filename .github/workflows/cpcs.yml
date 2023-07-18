@@ -14,6 +14,10 @@ jobs:
             sed -i '/^\t<!-- start config -->.*/a\
               <file>.</file>
               ' phpcs.xml
+            sed -i '/^\t<!-- start config -->.*/a\
+              <file>.</file>
+              ' phpcs.xml
+            sed '/MY_DOMAIN/ s//do-it-bad/' phpcs.xml
             cat phpcs.xml
         - name: CPCS checks
           uses: 10up/wpcs-action@stable

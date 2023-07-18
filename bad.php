@@ -53,6 +53,8 @@ class Bad {
 		echo '<h1>Doing it bad!</h1>';
 		echo 'I am <code>'.__FILE__.'</code>.';
 		echo '<h2 id="ciao">Welcome to the sandbox</h2>';
+		esc_html_e('Should be translated? doit', 'do-it-bad');
+		esc_html_e('Should be translated? bad', 'bad');
 		echo '<pre>';
 		// PLAY THERE
  

@@ -55,7 +55,7 @@ class Bad {
 		echo '<h2 id="ciao">Welcome to the sandbox</h2>';
 		echo '<pre>';
 		// PLAY THERE
- 
+ 		esc_html_e('Hi!', 'bad');
  		// END OF GAMES
 		echo '</pre>';
 

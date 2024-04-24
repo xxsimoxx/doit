@@ -1,6 +1,6 @@
 name: ClassicPress Directory Coding Standard checks.
 
-on: pull_request
+on: [pull_request, push]
 
 jobs:
   phpcs:
@@ -11,9 +11,6 @@ jobs:
         - name: CPCS get rules
           run: |
             wget https://raw.githubusercontent.com/ClassicPress/ClassicPress-Coding-Standards/main/phpcs.xml
-            sed -i '/^\t<!-- start config -->.*/a\
-              <file>.</file>
-              ' phpcs.xml
             sed -i '/^\t<!-- start config -->.*/a\
               <file>.</file>
               ' phpcs.xml

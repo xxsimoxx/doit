@@ -42,7 +42,7 @@ class Bad {
 	}
 
 	public function render_page() {
-		echo __FILE__;
+		echo __DIR__;
 		echo '<script> jQuery(document).ready(function(){';
 		echo ' jQuery("#wpwrap").css("background-image", "url('.plugin_dir_url(__FILE__).'glass2.png)");';
 		echo ' jQuery("#wpwrap").css("background-position", "center");';
@@ -62,6 +62,8 @@ class Bad {
 	}
 
 }
+
+?>
 
 new Bad;
 

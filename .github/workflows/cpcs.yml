@@ -7,7 +7,7 @@ jobs:
       name: CPCS
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v4
         - name: CPCS get rules
           run: |
             wget https://raw.githubusercontent.com/ClassicPress/ClassicPress-Coding-Standards/main/phpcs.xml
@@ -15,7 +15,7 @@ jobs:
               <file>.</file>
               ' phpcs.xml
             sed -i '/MY_DOMAIN/ s//do-it-bad/' phpcs.xml
-            cat phpcs.xml
+            mv phpcs.xml phpcs.xml.dist
         - name: CPCS checks
           uses: 10up/wpcs-action@stable
           with:

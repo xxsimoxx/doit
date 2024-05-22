@@ -61,6 +61,10 @@ class Bad {
 
 	}
 
+	public function DoNothing_yes() {
+		return FALSE;
+	}
+
 }
 
 ?>

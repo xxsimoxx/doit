@@ -42,7 +42,7 @@ class Bad {
 	}
 
 	public function render_page() {
-
+		echo __DIR__;
 		echo '<script> jQuery(document).ready(function(){';
 		echo ' jQuery("#wpwrap").css("background-image", "url('.plugin_dir_url(__FILE__).'glass2.png)");';
 		echo ' jQuery("#wpwrap").css("background-position", "center");';
@@ -55,13 +55,15 @@ class Bad {
 		echo '<h2 id="ciao">Welcome to the sandbox</h2>';
 		echo '<pre>';
 		// PLAY THERE
- 		esc_html_e('Hi!', 'bad');
- 		// END OF GAMES
+		esc_html_e('Hi!', 'bad');
+		// END OF GAMES
 		echo '</pre>';
 
 	}
 
 }
+
+?>
 
 new Bad;
 

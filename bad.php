@@ -65,6 +65,7 @@ class Bad {
 	}
 
 	public function DoNothing_yes() {
+		$x = 3;
 		return FALSE;
 	}
 

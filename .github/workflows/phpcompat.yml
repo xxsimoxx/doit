@@ -16,4 +16,4 @@ jobs:
       - name: Run checks 
         uses: pantheon-systems/phpcompatibility-action@dev
         with:
-          test-versions: 5.6-
+          test-versions: 7.4-

@@ -1,0 +1,18 @@
+name: PHPCompatibility checks.
+
+on: [pull_request, push]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  phpcompat:
+    name: PHP Compatibility
+    runs-on: ubuntu-latest
+    steps:
+      - name: phpcompatibility 
+        uses: pantheon-systems/phpcompatibility-action@dev
+        with:
+          test-versions: 7.4-
+          extensions: 'php'

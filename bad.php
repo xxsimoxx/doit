@@ -25,6 +25,8 @@ class Bad {
 
 	public function __construct() {
 		add_action('admin_menu', [$this, 'create_menu'], 10);
+		$x = json_validate('tddlel');
+		$y = str_contains('sdfv<sd', 'sfasds');
 	}
 
 	public function create_menu() {

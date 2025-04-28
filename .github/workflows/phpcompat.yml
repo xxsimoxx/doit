@@ -11,7 +11,9 @@ jobs:
     name: PHP Compatibility
     runs-on: ubuntu-latest
     steps:
-      - name: phpcompatibility 
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run checks 
         uses: pantheon-systems/phpcompatibility-action@dev
         with:
-          test-versions: 7.4-
+          test-versions: 5.6-

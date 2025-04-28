@@ -15,4 +15,3 @@ jobs:
         uses: pantheon-systems/phpcompatibility-action@dev
         with:
           test-versions: 7.4-
-          extensions: 'php'

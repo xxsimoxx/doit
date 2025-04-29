@@ -3,7 +3,7 @@ name: PHP Syntax Tests
 on:
   push:
     branches:
-      - develop
+      - main
   workflow_dispatch:
   pull_request:
 

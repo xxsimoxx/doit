@@ -1,19 +1,24 @@
-name: PHPCompatibility checks.
+name: PHP Syntax Tests
 
-on: [pull_request, push]
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+on:
+  push:
+    branches:
+      - develop
+  workflow_dispatch:
+  pull_request:
 
 jobs:
-  phpcompat:
-    name: PHP Compatibility
+  test-php:
+    name: "PHP ${{ matrix.php }} on MySQL ${{matrix.mysql}}${{ matrix.memcached && ' with memcached' || '' }}${{ 'xdebug' == matrix.coverage && ' with XDebug' || '' }}${{ matrix.experimental && ' - Experimental' || '' }}"
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Run checks 
-        uses: pantheon-systems/phpcompatibility-action@dev
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
         with:
-          test-versions: 7.4-
+          php-version: "${{ matrix.php }}"
+      - name: Check syntax
+        uses: mlocati/check-php-syntax@v1
+        with:
+          directory: .
+          fail-on-warnings: true

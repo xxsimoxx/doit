@@ -9,10 +9,12 @@ on:
 
 jobs:
   test-php:
-    name: "PHP ${{ matrix.php }} on MySQL ${{matrix.mysql}}${{ matrix.memcached && ' with memcached' || '' }}${{ 'xdebug' == matrix.coverage && ' with XDebug' || '' }}${{ matrix.experimental && ' - Experimental' || '' }}"
+    name: "PHP ${{ matrix.php }}"
     runs-on: ubuntu-latest
     
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:

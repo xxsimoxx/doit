@@ -58,9 +58,8 @@ class Bad {
 		echo '<pre>';
 		// PLAY THERE
 		esc_html_e('Hi!', 'bad');
-		?> text; <?= 'text' ?>
 
-<?
+		str_starts_with('a', 'b');
 		// END OF GAMES
 		echo '</pre>';
 

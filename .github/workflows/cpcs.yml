@@ -7,7 +7,14 @@ jobs:
       name: WPCS
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v4
+        - name: checkout
+          uses: actions/checkout@v4
+        - name: spyBefore
+          run: |
+            pwd
+            cat composer.json
+            echo "ciao"
+            cat .composer/composer.json
         - name: WPCS check
           uses: 10up/wpcs-action@stable
         - name: spy

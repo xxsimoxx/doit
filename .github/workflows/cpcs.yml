@@ -10,7 +10,7 @@ jobs:
         - name: checkout
           uses: actions/checkout@v4
         - name: WPCS check
-          uses: 10up/wpcs-action@stable
+          uses: 10up/wpcs-action@develop
         - name: spy
           run: |
             ls

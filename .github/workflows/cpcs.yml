@@ -9,18 +9,9 @@ jobs:
       steps:
         - name: checkout
           uses: actions/checkout@v4
-        - name: spyBefore
-          run: |
-            pwd
-            cat composer.json
-            echo "ciao"
-            cat .composer/composer.json
         - name: WPCS check
           uses: 10up/wpcs-action@stable
         - name: spy
           run: |
-            pwd
-            cat composer.json
-            echo "ciao"
-            cat .composer/composer.json
+            ls
           

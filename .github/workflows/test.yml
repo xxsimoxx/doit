@@ -14,4 +14,4 @@ jobs:
 
         - name: Test variable
           run: |
-              echo Hi ${{ github.actor }}! 👋
+              echo Hi @${{ github.actor }}! 👋

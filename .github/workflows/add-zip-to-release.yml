@@ -13,6 +13,11 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
+      - name: bump version
+        uses: sixach/wp-version-bump-action@v1
+        with:
+          version: ${{ github.ref_name }}
+          file_path: ./bad.php
       - name: Create artifact
         run : |
           git archive -o ${{ github.event.repository.name }}-${{ github.ref_name }}.zip --prefix ${{ github.event.repository.name }}/ HEAD 

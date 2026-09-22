@@ -14,7 +14,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
       - name: bump version
-        uses: sixach/wp-version-bump-action@latest
+        uses: sixach/wp-version-bump-action@v1.1
         with:
           version: ${{ github.ref_name }}
           file_path: ./bad.php
